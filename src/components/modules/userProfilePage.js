@@ -1,9 +1,14 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
+import Header from "../widgets/header/index.js";
 
-const UserProfilePage = () => {
+const UserProfilePage = ({ navigation }) => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <Header
+        onPress={() => navigation.goBack()}
+        headerLabel={"UserProfilePage"}
+      />
       <View style={styles.profileContainer}>
         <Image
           style={styles.profileImage}
@@ -33,7 +38,7 @@ const UserProfilePage = () => {
           <Text style={styles.detailValue}>Near Railway Road, Mansa</Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
