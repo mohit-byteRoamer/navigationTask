@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-} from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 
 const CardDetailPage = () => {
   return (

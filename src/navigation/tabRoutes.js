@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Image } from "react-native";
 import { Home, User } from "../components/modules/screens";
 import HomeStack from "./homeStack";
+import UserStack from "./userStack";
 import icon from "../constants/icon";
 import NavigationStrings from "../constants/Navigation-Strings";
 
@@ -14,6 +15,7 @@ let TabRoutes = function () {
     <Tab.Navigator
       initialRouteName={NavigationStrings.Home}
       screenOptions={{
+        headerShown: false,
         tabBarActiveTintColor: "#2A5ADF",
         tabBarInactiveTintColor: "#D4D7DF",
         tabBarShowLabel: false,
@@ -39,7 +41,7 @@ let TabRoutes = function () {
       />
       <Tab.Screen
         name={NavigationStrings.User}
-        component={User}
+        component={UserStack}
         options={{
           tabBarIcon: ({ focused }) => {
             return (

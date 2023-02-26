@@ -1,14 +1,9 @@
 import React from "react";
 import { View, Text, StyleSheet, Image, SafeAreaView } from "react-native";
-import Header from "../widgets/header/index.js";
 
 const UserProfilePage = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
-      <Header
-        onPress={() => navigation.goBack()}
-        headerLabel={"UserProfilePage"}
-      />
       <View style={styles.profileContainer}>
         <Image
           style={styles.profileImage}
